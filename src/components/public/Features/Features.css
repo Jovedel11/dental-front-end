@@ -1,0 +1,26 @@
+.features-section {
+  padding: 4rem 0;
+  background: var(--section-bg);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.feature-card {
+  background: var(--pure-white);
+  padding: 2rem;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}

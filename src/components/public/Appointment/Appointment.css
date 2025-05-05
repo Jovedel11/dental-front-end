@@ -1,0 +1,23 @@
+.appointment-section {
+  background: linear-gradient(135deg, var(--accent-violet), var(--soft-violet));
+  color: var(--pure-white);
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.appointment-cta {
+  background: var(--pure-white);
+  color: var(--accent-violet);
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.appointment-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}

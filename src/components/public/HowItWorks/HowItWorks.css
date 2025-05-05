@@ -1,0 +1,219 @@
+.how-it-works {
+  padding: 6rem 2rem;
+  background: url("/images/dental.png") no-repeat center/cover;
+  position: relative;
+  z-index: 0;
+  background-blend-mode: darken;
+}
+
+.how-it-works::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.section-headers {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-headers h2 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  color: rgba(255, 255, 255, 0.9); 
+}
+
+.section-headers p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 12px 30px rgba(175, 167, 240, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.step-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(108, 99, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #6C63FF;
+}
+
+.step-number {
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.step-content h3 {
+  color: var(--pure-white);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.step-content p {
+  color: #f1f1f1;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  min-height: 60px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+  cursor: help;
+}
+
+.tooltip-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #F9FAFF;
+  color: #6C63FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 170px;
+  background: #2A5C7D;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 3;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.step-connector {
+  position: absolute;
+  right: -2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.desktop-arrow {
+  font-size: 2rem;
+  color: var(--accent-violet);
+  opacity: 0.3;
+}
+
+.mobile-line {
+  display: none;
+}
+
+.cta-note {
+  text-align: center;
+  margin-top: 3.5rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+
+  .step-card {
+    margin-bottom: 2rem;
+  }
+
+  .step-connector {
+    right: auto;
+    bottom: -2rem;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .desktop-arrow {
+    display: none;
+  }
+
+  .mobile-line {
+    display: block;
+    width: 2px;
+    height: 40px;
+    background: var(--accent-violet);
+    opacity: 0.2;
+  }
+
+  .step-content p {
+    min-height: auto;
+  }
+
+  .section-header h2 {
+    font-size: 2.1rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+  }
+}

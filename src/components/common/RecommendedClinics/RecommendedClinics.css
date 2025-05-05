@@ -1,0 +1,246 @@
+/* RecommendedClinics.css */
+.recommended-clinic {
+  padding: 6rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #f8faff, #ffffff);
+}
+
+.recommended-clinic__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.recommended-clinic__title {
+  font-size: 2.75rem;
+  color: #2A5C7D;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.recommended-clinic__title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #6C63FF;
+  margin: 1rem auto 0;
+}
+
+.recommended-clinic__subtitle {
+  color: #64748b;
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.recommended-clinic__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2.5rem;
+  padding: 0 2rem;
+}
+
+.recommended-clinic__card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(42, 92, 125, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.recommended-clinic__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(42, 92, 125, 0.12);
+}
+
+.recommended-clinic__image-container {
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+}
+
+.recommended-clinic__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.recommended-clinic__card:hover .recommended-clinic__image {
+  transform: scale(1.05);
+}
+
+.recommended-clinic__badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #2A5C7D;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.recommended-clinic__icon--star {
+  color: #FFD700;
+  font-size: 1.1rem;
+}
+
+.recommended-clinic__card-header {
+  padding: 1.5rem;
+}
+
+.recommended-clinic__name {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.recommended-clinic__availability-meter {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.recommended-clinic__availability-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #6C63FF, #2A5C7D);
+  border-radius: 4px;
+}
+
+.recommended-clinic__availability-text {
+  display: block;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #6C63FF;
+  font-weight: 500;
+}
+
+.recommended-clinic__details {
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.recommended-clinic__detail-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #475569;
+}
+
+.recommended-clinic__icon {
+  font-size: 1.2rem;
+  color: #6C63FF;
+  min-width: 24px;
+}
+
+.recommended-clinic__services {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.recommended-clinic__services-title {
+  font-size: 1.2rem;
+  color: #2A5C7D;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.recommended-clinic__services-list {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.recommended-clinic__service-item {
+  padding: 1rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background 0.2s ease;
+}
+
+.recommended-clinic__service-item:last-child {
+  border-bottom: none;
+}
+
+.recommended-clinic__service-item:hover {
+  background: #f8faff;
+}
+
+.recommended-clinic__service-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.recommended-clinic__icon--expand {
+  color: #6C63FF;
+  transition: transform 0.2s ease;
+}
+
+.recommended-clinic__service-name {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.recommended-clinic__service-details {
+  padding-top: 0.75rem;
+  margin-left: 2rem;
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.recommended-clinic__cta {
+  margin: 1.5rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #6C63FF, #2A5C7D);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.recommended-clinic__cta:hover {
+  transform: scale(0.98);
+}
+
+.recommended-clinic__icon--cta {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .recommended-clinic {
+    padding: 4rem 1rem;
+  }
+  
+  .recommended-clinic__title {
+    font-size: 2rem;
+  }
+  
+  .recommended-clinic__grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  
+  .recommended-clinic__image-container {
+    height: 200px;
+  }
+}

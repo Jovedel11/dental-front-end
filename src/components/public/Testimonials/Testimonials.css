@@ -1,0 +1,132 @@
+.testimonials-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(
+    to bottom right,
+    rgba(249, 250, 255, 0.9),
+    rgba(255, 255, 255, 1)
+  );
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: var(--pure-white);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.quote-mark {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  color: var(--accent-violet);
+  opacity: 0.2;
+  font-size: 3rem;
+}
+
+.rating {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.star-icon {
+  color: #FFD700;
+  font-size: 1.2rem;
+}
+
+blockquote p {
+  color: var(--text-dark);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+blockquote p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: var(--accent-violet);
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-blue);
+}
+
+.author-details h4 {
+  color: var(--primary-blue);
+  margin-bottom: 0.3rem;
+}
+
+.author-details p {
+  color: var(--subtext);
+  font-size: 0.9rem;
+}
+
+.disclaimer-note {
+  text-align: center;
+  margin-top: 3rem;
+  color: var(--subtext);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+}

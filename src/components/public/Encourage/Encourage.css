@@ -1,0 +1,212 @@
+:root {
+  --bg: #f9fbff;
+  --white: #ffffff;
+  --primary: #2A5C7D;
+  --accent: #6C63FF;
+  --text: #1e293b;
+  --subtext: #64748b;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  --radius: 2rem;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --image-overlay: linear-gradient(rgba(249, 251, 255, 0.9), rgba(249, 251, 255, 0.9));
+}
+
+.card-section {
+  padding: 6rem 1rem;
+  background: var(--image-overlay), url('/images/teethh.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.card-section {
+  scroll-margin-top: 100px; 
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  width: 400px;
+  flex: 1;
+  min-width: 380px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.card-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.icon-circle {
+  background: #e0f0ff;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.card-list li {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.check-icon {
+  color: var(--accent);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.subtext {
+  font-size: 0.95rem;
+  color: var(--subtext);
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--bg);
+  border-radius: 1rem;
+}
+
+.stat-icon {
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+.primary-btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.primary-btn:not(.outline) {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--white);
+}
+
+.primary-btn.outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(42, 92, 125, 0.2);
+}
+
+.footer-note {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.badge-group {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.badge {
+  background: var(--bg);
+  padding: 0.8rem 1.2rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+}
